@@ -95,7 +95,7 @@ namespace codejuliocesar
                 content.Add(new StreamContent(new MemoryStream(bytes)), "answer", arquivo);
 
 
-                HttpResponseMessage submitResponse = await client.PostAsync(@"https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=9c6b9d7b82d3413024d0475e980b73fdc963186a", content);
+                HttpResponseMessage submitResponse = await client.PostAsync(@"https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=SEU-TOKEN", content);
 
                 string mensagem = await submitResponse.Content.ReadAsStringAsync();
 
